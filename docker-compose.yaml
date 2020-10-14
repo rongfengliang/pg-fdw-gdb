@@ -1,0 +1,14 @@
+version: "3"
+services: 
+    fdw-db:
+      # image: dockerimage.yonyou.com/library/postgres-pathman-fdw:12.4
+      image: dalongrong/pg-gdb
+      cap_add:
+          - ALL
+      ports:
+      - "5434:5432"
+      volumes: 
+      - "./data:/var/lib/postgresql/data"
+      - "./files:/opt/files"
+      environment: 
+      - "POSTGRES_PASSWORD=UtNl9D4t"
